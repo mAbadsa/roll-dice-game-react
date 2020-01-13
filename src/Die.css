@@ -3,3 +3,33 @@
     margin: 10px;
     color: rgb(30, 216, 206);
 }
+
+.shaking {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -10deg);
+    }
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 7deg);
+    }
+    45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
